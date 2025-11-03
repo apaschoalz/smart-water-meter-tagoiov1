@@ -1,20 +1,32 @@
-# Medidores de Água Inteligentes com Detecção de Vazamento e Fechamento Automático (Integração com TagoIO)
+# Medidores de Água Inteligentes com TagoIO
 
-Este repositório contém um projeto DIY completo para um sistema de monitoramento de água inteligente usando ESP32, integrado à plataforma IoT TagoIO. O sistema:
-- Monitora o consumo de água em tempo real.
-- Detecta vazamentos via sensor de umidade.
-- Fecha automaticamente a válvula de água em caso de vazamento.
-- Envia dados para dashboards na TagoIO com alertas.
-
-Inspirado na documentação da TagoIO (docs.tago.io) e projetos DIY de ESP32 (ex: esp32io.com, circuitdigest.com).
+Sistema DIY com ESP32:  
+- Monitora fluxo (YF-S201)  
+- Detecta vazamento e fecha válvula automaticamente  
+- Envia dados para TagoIO  
 
 ## Funcionalidades
-- Leitura de fluxo de água (sensor YF-S201).
-- Detecção de vazamento com fechamento automático (válvula solenoide + relé).
-- Envio de dados via HTTP para TagoIO.
-- Dashboard com gráficos, gauges e alertas.
+- Fluxo em L/min  
+- Consumo total  
+- Alerta de vazamento  
+- Dashboard na TagoIO  
 
-## Hardware Recomendado
-Baseado em buscas por medidores inteligentes com shutoff automático (2025):
-- **Moen Flo Smart Water Monitor + Shutoff** (recomendado para inspiração comercial).
-- Componentes DIY: ESP32, YF-S201 (fluxo), sensor capacitivo (vazamento), válvula 12V, relé.
+## Hardware
+- ESP32  
+- YF-S201 (fluxo)  
+- Sensor de vazamento  
+- Válvula solenoide 12V + relé  
+
+> Detalhes: [docs/hardware.md](docs/hardware.md)
+
+## Código
+[src/main.ino](src/main.ino)
+
+## CI/CD
+[![CI](https://github.com/SEU_USUARIO/smart-water-meter-tagoio/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU_USUARIO/smart-water-meter-tagoio/actions)
+
+## Simulação
+`python simulations/water_meter_sim.py`
+
+## Licença
+MIT
