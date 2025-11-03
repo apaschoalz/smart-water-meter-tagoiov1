@@ -15,3 +15,4 @@ GPIO5
 GPIO2 ← [YF-S201] ← [Tubo]
 GPIO4 ← [Vazamento]
 3.3V/GND
+.
